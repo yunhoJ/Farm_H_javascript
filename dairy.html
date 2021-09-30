@@ -1,86 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            font-style: inherit;
-        }
-        p{
-            font-size: 20px;
-            font-weight: bold;
-        }
-        table, p{
-            width: 85%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        th{
-            text-align: left;
-            font-size: 18px;
-        }
-        td{
-            padding: 5px;
-        }
-        .title{
-            width: 30%;
-        }
-        .info{
-            width: 70%;
-        }
-    </style>
-</head>
-<body>
-    <p>날짜</p>
-    <table>
-        <th colspan="2">작물명</th>
-        <tr>
-            <td class="title">날씨</td>
-            <td class="info">맑음</td>
-        </tr>
-        <tr>
-            <td class="title">최저 기온</td>
-            <td class="info">17</td>
-        </tr>
-        <tr>
-            <td class="title">최고 기온</td>
-            <td class="info">27</td>
-        </tr>
-        <tr>
-            <td class="title">작업 인원</td>
-            <td class="info">5</td>
-        </tr>
-        <tr>
-            <td class="title">작업 시간</td>
-            <td class="info">6</td>
-        </tr>
-        <tr>
-            <td class="title">병충해</td>
-            <td class="info">없음</td>
-        </tr>
-        <tr>
-            <td class="title">농약</td>
-            <td class="info">농약이름</td>
-        </tr>
-        <tr>
-            <td class="title">농약 사용량</td>
-            <td class="info">사용량</td>
-        </tr>
-        <tr>
-            <td class="title">비료</td>
-            <td class="info">비료이름</td>
-        </tr>
-        <tr>
-            <td class="title">비료 사용량</td>
-            <td class="info">사용량</td>
-        </tr>
-        <tr>
-            <td class="title">작업내용</td>
-            <td class="info">작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용</td>
-        </tr>
-    </table>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+        <style>
+            body{
+                font-style: inherit;
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            th{
+                text-align: left;
+                font-size: 18px;
+            }
+            td{
+                padding: 5px;
+            }
+            .title{
+                width: 30%;
+            }
+            .info{
+                width: 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 달력추가 및 버튼 활성화 -->
+        <div class="calendar">
+            <div class="header">
+                <div class="year-month"></div>
+                <div class="nav">
+                    <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                    <button class="nav-btn go-today" onclick="goToday()">Today</button>
+                    <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="days">
+                    <div class="day">일</div>
+                    <div class="day">월</div>
+                    <div class="day">화</div>
+                    <div class="day">수</div>
+                    <div class="day">목</div>
+                    <div class="day">금</div>
+                    <div class="day">토</div>
+                </div>
+                <div class="dates"></div>
+            </div>
+            <table>
+                <th colspan="2">작물명</th>
+                <tr>
+                    <td class="title">날씨</td>
+                    <td class="info">맑음</td>
+                </tr>
+                <tr>
+                    <td class="title">최저 기온</td>
+                    <td class="info">17</td>
+                </tr>
+                <tr>
+                    <td class="title">최고 기온</td>
+                    <td class="info">27</td>
+                </tr>
+                <tr>
+                    <td class="title">작업 인원</td>
+                    <td class="info">5</td>
+                </tr>
+                <tr>
+                    <td class="title">작업 시간</td>
+                    <td class="info">6</td>
+                </tr>
+                <tr>
+                    <td class="title">병충해</td>
+                    <td class="info">없음</td>
+                </tr>
+                <tr>
+                    <td class="title">농약</td>
+                    <td class="info">농약이름</td>
+                </tr>
+                <tr>
+                    <td class="title">농약 사용량</td>
+                    <td class="info">사용량</td>
+                </tr>
+                <tr>
+                    <td class="title">비료</td>
+                    <td class="info">비료이름</td>
+                </tr>
+                <tr>
+                    <td class="title">비료 사용량</td>
+                    <td class="info">사용량</td>
+                </tr>
+                <tr>
+                    <td class="title">작업내용</td>
+                    <td class="info">작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용</td>
+                </tr>
+            </table>
+        </div>
+        <!-- <div>
+        <p>날짜</p>
+        <table>
+            <th colspan="2">작물명</th>
+            <tr>
+                <td class="title">날씨</td>
+                <td class="info">맑음</td>
+            </tr>
+            <tr>
+                <td class="title">최저 기온</td>
+                <td class="info">17</td>
+            </tr>
+            <tr>
+                <td class="title">최고 기온</td>
+                <td class="info">27</td>
+            </tr>
+            <tr>
+                <td class="title">작업 인원</td>
+                <td class="info">5</td>
+            </tr>
+            <tr>
+                <td class="title">작업 시간</td>
+                <td class="info">6</td>
+            </tr>
+            <tr>
+                <td class="title">병충해</td>
+                <td class="info">없음</td>
+            </tr>
+            <tr>
+                <td class="title">농약</td>
+                <td class="info">농약이름</td>
+            </tr>
+            <tr>
+                <td class="title">농약 사용량</td>
+                <td class="info">사용량</td>
+            </tr>
+            <tr>
+                <td class="title">비료</td>
+                <td class="info">비료이름</td>
+            </tr>
+            <tr>
+                <td class="title">비료 사용량</td>
+                <td class="info">사용량</td>
+            </tr>
+            <tr>
+                <td class="title">작업내용</td>
+                <td class="info">작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용</td>
+            </tr>
+        </table>
+        </div> -->
+        <script src="cal.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,85 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="calendar.css">
+        <title>Document</title>
+        <style>
+            body{
+                font-style: inherit;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 5%;
+            }
+            th{
+                text-align: left;
+                font-size: 18px;
+            }
+            td{
+                padding: 5px;
+            }
+            .title{
+                width: 30%;
+            }
+            .info{
+                width: 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 달력추가 및 버튼 활성화 -->
+        <div id="calendarForm"></div>
+        <div id="diaryFrom">
+        <table>
+            <th colspan="2">작물명</th>
+            <tr>
+                <td class="title">날씨</td>
+                <td class="info">맑음</td>
+            </tr>
+            <tr>
+                <td class="title">최저 기온</td>
+                <td class="info">17</td>
+            </tr>
+            <tr>
+                <td class="title">최고 기온</td>
+                <td class="info">27</td>
+            </tr>
+            <tr>
+                <td class="title">습도</td>
+                <td class="info">15%</td>
+            </tr>
+            <tr>
+                <td class="title">병충해</td>
+                <td class="info">없음</td>
+            </tr>
+            <tr>
+                <td class="title">방제 정보</td>
+                <td class="info">방제</td>
+            </tr>
+            <tr>
+                <td class="title">농약</td>
+                <td class="info">농약이름</td>
+            </tr>
+            <tr>
+                <td class="title">비료</td>
+                <td class="info">비료이름</td>
+            </tr>
+            <tr>
+                <td class="title">작업내용</td>
+                <td class="info">작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용작업내용</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <img src="./0012211_10186285.png" alt="저장 이미지" style="max-height: 400px; max-width: 350px;">
+                </td>
+            </tr>
+        </table>
+        </div>
+        <script src="calendar.js"></script>
+    </body>
+    </html>

@@ -83,6 +83,30 @@ function calendarMaker(target, date) {
         $(".custom_calendar_table").on("click", "td", function () {
             $(".custom_calendar_table .select_day").removeClass("select_day");
             $(this).removeClass("select_day").addClass("select_day");
+            let k = document.getElementById("top_search").value;
+            $.ajax({
+                
+                type :"get" ,
+                url : "http://주소수정/diary",
+                data : {sea : k},
+                dataType : 'JSON',
+                success : function(data) {
+                    console.log("확인");
+                    let Le = document.getElementById("diaryFrom");
+
+                    if(data != ""){
+                        let plz="";
+                        let alll="";
+
+                        alll = `'${data[i].article_title}','${data[i].article_id}','${data[i].link}','${data[i].author_name}','${data[i].citated_count}','${data[i].reg_date}','${data[i].category}','${data[i].keyword}','${data[i].abstract}'`;
+                        plz += `<section><ul id="lef_resultT"><li style="margin-left: 0.1%;">${data[i].category}</li><li>${data[i].citated_count}회</li><li>${data[i].reg_date}</li></ul></section><br><section id="name"><div onclick="test1_c(${alll})">${data[i].article_title}</div></section>`;
+
+                        Le.innerHTML=(plz+"");
+                    }
+                },
+                error : function() {
+                }
+            });
         });
     }
 }

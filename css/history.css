@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+div {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .history_bg{
     background: azure;
     background-size: cover;
@@ -13,32 +19,10 @@
 .history_bg>h2{
     text-align: center;
 }
-.history_btn1{
-    background: #98FB98;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 10%;
+.history_btn{
+    background: #27ae5f;
+    width: 80%;
     display: inline-block;
-    float: left;
-    height: 10%;
-    border-radius: 20px;
-    color: black;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 50px 0;
-    box-sizing: border-box;
-    transition: all ease 0.3s;
-    overflow: hidden;
-    margin-bottom: 10px;       
-}
-.history_btn2{
-    background: #98FB98;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 10%;
-    display: inline-block;
-    float: left;
     height: 10%;
     border-radius: 20px;
     color: black;
@@ -50,26 +34,14 @@
     transition: all ease 0.3s;
     overflow: hidden;
     margin-bottom: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: none;          
 }
-.history_btn3{
-    background: #98FB98;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 10%;
-    display: inline-block;
-    clear: left;
-    height: 10%;
-    border-radius: 20px;
-    color: black;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 50px 0;
-    box-sizing: border-box;
-    transition: all ease 0.3s;
-    overflow: hidden;
-    margin-bottom: 50px;
+span{
+    color: white;
 }
+
 #fertilizer{
     width: 100px;
 }

@@ -1,91 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <style>
-        img{width: 100%;
-            height: 100px;
-            /* margin-left: 50%; */
-            
-        }
-
-        div.btn{
-            font-size: 17px;
-            font-weight: 700;
-            font-style: inherit;  
-            color:white;
-            
-            width: 90%;
-            height: 170px;
-            background-color: #27ae5f;
-            /* margin-left: 0%; */
-            margin-top: 20px;
-            margin-left: 5.5%;
-            border-radius: 20px;
+        div {
             text-align: center;
-            line-height: 30px;
-            
-                    }
-         div.btn a{
-            display:inline-block;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main_bg {
+            background: azure;
+            background-size: cover;
             width: 100%;
-            height: 170px;
-            margin-left: 0%;
-            text-decoration: none;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: auto;
+        }
+
+        .main_bg>h2 {
+            text-align: center;
+        }
+
+        .main_btn {
+            background: #27ae5f;
+            width: 80%;
+            display: inline-block;
+            height: 10%;
             border-radius: 20px;
-            background-color: #27ae5f;
-            color:white;
-            
-           
-        }     
-        /* div.btn a:hover, div.btn>a:active{
-            background-color: #27ae5f;
-        }  */
-
-
-    
-        div#back{
-            background-color: white;
-            width: 100%;
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 50px 0;
+            box-sizing: border-box;
+            transition: all ease 0.3s;
+            overflow: hidden;
+            margin-bottom: 10px;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            text-decoration: none;
         }
 
-        div.circle{
-            background-color: white;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin-left: 35%;
-            margin-top: 20px;
-            
-            
-            
-
-        }
-
-        /* div#camera */
         
 
+        #fertilizer {
+            width: 100px;
+        }
+
+        #mic {
+            width: 100px;
+            height: 100px;
+        }
+
+        #check {
+            width: 100px;
+            height: 100px;
+        }
+        span{
+            color: white;
+        }
+        .main_img{
+            height: 100px; width: 100px; color: white; 
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>
-            <img src="./image/mainimg.png" alt="farm.H_이미지">
-        </h1>
-    </header>    
-        <div id="back">
-            <div  id="camera" class="btn"><a href="http://www.naver.com" ><div class="circle"><img src="./image/vv.png" alt="카메라">병해충 판독</div></a>    </div>
-            <div  id="diary" class="btn"><a href="http://www.naver.com" ><div class="circle"><img src="./image/cc.png" alt="노트">이력 관리</div></a>  </div>
-            <div  id="drone" class="btn"><a href="http://www.naver.com" ><div class="circle"><img src="./image/cc.png" alt="노트">드론방제 신청 </div></a> </div>
-            
+    <div class="main_bg">
+        <h2 title="farm_h"><img src="/HTML/image/mainimg.png" style="width: 300px; height: 100px;"></h2>
+        <div class="main_inner">
+            <a href="#" class="main_btn">
+                <img src="/imgs/smart-farm.png" id="main_disease" class="main_img"><br>
+                <span>병충해 판독</span>
+            </a>
+            <a href="http://220.80.203.20:5500/history.html" class="main_btn">
+                <img src="/imgs/smart-farm2.png" id="main_history" class="main_img"><br>
+                <span>이력관리</span>
+            </a>
+            <a href="#" class="main_btn">
+                <img src="/imgs/smart-farm3.png" id="main_drone" class="main_img"><br>
+                <span>드론 방제 신청</span>
+            </a>
         </div>
+    </div>
 
-        <!-- <p>방식 1</p>
+    <!-- <p>방식 1</p>
     <input type="file" accept="image/*;capture=camera"/> -->
-    
+
 </body>
+
 </html>

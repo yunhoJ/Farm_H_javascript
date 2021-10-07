@@ -36,7 +36,8 @@ div {
     margin-bottom: 10px;
     padding-top: 2%;
     padding-bottom: 2%;
-    text-decoration: none;          
+    text-decoration: none;
+    cursor: pointer;          
 }
 span{
     color: white;

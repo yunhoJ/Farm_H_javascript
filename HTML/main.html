@@ -26,6 +26,8 @@
 
         .main_bg>h2 {
             text-align: center;
+            margin-bottom: 0%;
+            margin-top: 0%;
         }
 
         .main_btn {
@@ -46,6 +48,7 @@
             padding-top: 2%;
             padding-bottom: 2%;
             text-decoration: none;
+            cursor: pointer;
         }
 
         
@@ -74,12 +77,15 @@
 
 <body>
     <div class="main_bg">
-        <h2 title="farm_h"><img src="/HTML/image/mainimg.png" style="width: 300px; height: 100px;"></h2>
+        <h2 title="farm_h"><img src="/HTML/image/mainimg.png" style="width: 250px; height: 80px;"></h2>
         <div class="main_inner">
-            <a href="#" class="main_btn">
+            <label for="cam">
+            <div class="main_btn">
                 <img src="/imgs/smart-farm.png" id="main_disease" class="main_img"><br>
                 <span>병충해 판독</span>
-            </a>
+            <input type="file" id="cam" style="display: none;" accept="image/*;capture=camera"/>
+            </div>
+            </label>
             <a href="http://220.80.203.20:5500/history.html" class="main_btn">
                 <img src="/imgs/smart-farm2.png" id="main_history" class="main_img"><br>
                 <span>이력관리</span>
@@ -94,6 +100,12 @@
     <!-- <p>방식 1</p>
     <input type="file" accept="image/*;capture=camera"/> -->
 
+    <script>
+        document.getElementById("cam").addEventListener("change", function(){
+            
+            location.href="http://220.80.203.20:5500/analysis.html"
+        });
+    </script>
 </body>
 
 </html>

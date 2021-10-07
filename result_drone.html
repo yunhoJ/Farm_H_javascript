@@ -12,9 +12,25 @@
             align-items: center;
             justify-content: center;
         }
+        #info1 {
+            margin-top: 2%;
+        }
+        .disease_name {
+            display: inline-block;
+            background-color: whitesmoke;
+            width: 120pt;
+            height: 30pt;
+        }
+
+        .disease_acc {
+            display: inline-block;
+            background-color: whitesmoke;
+            width: 65pt;
+            height: 30pt;
+        }
         form{
             width: 90%;
-            margin-left: 5%
+            margin-left: 5%;
         }
         select::-ms-expand {
             display: none;
@@ -62,15 +78,14 @@
             outline: 0 none;
             margin-bottom: 10%;
         }
-        .info_txt{
-            width: 67%;
+        #size{
+            width: 68%;
             height: 43px;
             padding: 5px 30px 5px 10px;
             border: 2px solid #27ae5f;
             border-radius: 4px;
             outline: 0 none;
             margin-top: 5%;
-            margin-bottom: 3%;
         }
         #drone_apply{
             border: 1px solid;
@@ -88,36 +103,31 @@
         }
     </style>
 </head>
-
 <body>
     <div>
-        <h2 style="margin-bottom: 20px;">드론 방제</h2>
-        <!-- <div>
+        <h2 style="margin-bottom: 10px;">드론 방역</h2>
+        <div>
             <label for="input_file">
-                <span  style="background-color: #c3ffb4">↓이미지 선택↓</span><br>
-                <img src="/imgs/camera.png" style="cursor: pointer; width: 100px; height: 100px;">
-                <input type="file" id="input_file" style="display: none;" accept="image/*;capture=camera" />
+                <img src="/imgs/disease.png" style="cursor: pointer; width: 200px; height: 200px;">
             </label>
-        </div> -->
+        </div>
+        <div id="info1">
+            <span class="disease_name"></span>
+            <span class="disease_acc"></span>
+        </div>
         <div>
             <form action="">
-                <select name="fertilizer" class="drone_select">
-                    <option disabled selected>작물선택</option>
-                    <option value="tomato">토마토</option>
-                    <option value="apple">사과</option>
-                </select>
-                <input type="text" placeholder="농약 입력" class="info_txt">
                 <label for="date_select">
                     <br><span  style="background-color: #c3ffb4">↓날짜 선택↓</span>
                     <input type="date" name="날짜선택" class="date_select">
                 </label>
                 <select name="type" class="drone_select">
                     <option disabled selected>농지유형</option>
-                    <option value="non">논</option>
-                    <option value="bat">밭</option>
-                    <option value="house">하우스</option>
+                    <option value="">논</option>
+                    <option value="">밭</option>
+                    <option value="">하우스</option>
                 </select>
-                <input type="text" placeholder="평수(3.3m²) 입력" class="info_txt">
+                <input type="text" placeholder="평수(3.3m²) 입력" id="size">
                 <input type="submit" value="신청하기" id="drone_apply">
             </form>
         </div>

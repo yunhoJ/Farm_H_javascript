@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="stylesheet" href="/css/history.css">
-    
+
 </head>
+
 <body>
-    <div class="history_bg"><h2 title="이력관리">이력관리</h2>
+    <div class="history_bg">
+        <h2 title="이력관리">이력관리</h2>
         <div class="history_inner">
-            <a href="#" class="history_btn">
-                <img src="/imgs/fertilizer.png" id="fertilizer"><br>
-                <span>농약촬영</span>
-            </a>
+            <label for="fertilizer_cam">
+                <div class="history_btn">
+                    <img src="/imgs/fertilizer.png" id="fertilizer"><br>
+                    <span>농약촬영</span>
+                    <input type="file" style="display: none;" id="fertilizer_cam" accept="image/*;capture=camera" />
+                </div>
+            </label>
             <a href="#" class="history_btn">
                 <img src="/imgs/mic.png" id="mic"><br>
                 <span>음성작성</span>
             </a>
-            <a href="#" class="history_btn">
+            <a href="http://220.80.203.20:5500/diary.html" class="history_btn">
                 <img src="/imgs/check.png" id="check"><br>
                 <span>이력확인</span>
             </a>
         </div>
     </div>
 </body>
+
 </html>

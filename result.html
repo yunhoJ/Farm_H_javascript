@@ -39,10 +39,12 @@
             height: 100pt;
             width: 30pt;
         }
-        #info1{
+
+        #info1 {
             margin-top: 2%;
         }
-        #info2{
+
+        #info2 {
             display: inline-block;
             background-color: whitesmoke;
             width: 220pt;
@@ -51,9 +53,11 @@
             margin-top: 2%;
             text-align: left;
         }
-        .result_btn{
+
+        .result_btn {
             margin-top: 5%;
         }
+
         #drone {
             border: 1px solid;
             background-color: #27ae5f;
@@ -61,8 +65,9 @@
             border-radius: 4px;
             transition-duration: 0.3s;
             box-sizing: border-box;
-            width: 30%;
-            height: 35pt;
+            width: 37%;
+            height: 40pt;
+            margin-right: 3%;
         }
 
         #save {
@@ -71,9 +76,10 @@
             color: white;
             border-radius: 4px;
             transition-duration: 0.3s;
-            width: 30%;
-            height: 35pt;
             box-sizing: border-box;
+            width: 37%;
+            height: 40pt;
+            margin-left: 3%;
         }
 
         #drone:active {
@@ -94,8 +100,6 @@
         <div id="analysis_result">
             <img src="/imgs/disease.png" alt="" style="width: 80%; height: 90%">
         </div>
-
-
         <div id="info1">
             <span class="disease_name"></span>
             <span class="disease_acc"></span>
@@ -104,13 +108,14 @@
                     onclick="location.href='http://220.80.203.20:5500/fertilizer.html'">
             </span>
         </div>
-        <div id="info2"><h3 style="margin-top: 3%; margin-left: 4%;">예방법</h3>
+        <div id="info2">
+            <h3 style="margin-top: 3%; margin-left: 4%;">예방법</h3>
             <span class=""></span>
         </div>
 
     </div>
     <div class="result_btn">
-        <input type="button" value="드론 방제 신청" id="drone">
+        <input type="button" value="드론 방제 신청" id="drone" onclick="location.href='http://220.80.203.20:5500/result_drone.html'">
         <input type="submit" value="이력 저장" id="save" onclick="next()">
     </div>
 

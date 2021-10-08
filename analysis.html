@@ -47,7 +47,11 @@
         <h2 title="병충해 판독">병충해 판독</h2>
     </div>
     <div class="analysis_inner">
-        <img src=`${pic_path}` alt="" style="width: 80%; height: 90%;">
+        <label for="cameraFileInput">
+            
+            <input id="cameraFileInput"  type="file" accept="image/*" capture="environment" />
+        </label>
+        <img id="pictureFromCamera" style="width: 200px; height: 200px;"/>
     </div>
     <hr style="margin-top: 5%; margin-bottom: 5%;">
     <div class="analysis_btn">
@@ -57,7 +61,17 @@
 
 
     <script>
-        let pic_path = pic.value;
+
+
+
+        window.onload = document
+            .getElementById("cameraFileInput")
+            .addEventListener("change", function () {
+                document
+                    .getElementById("pictureFromCamera")
+                    .setAttribute("src", window.URL.createObjectURL(this.files[0]));
+            });
+        
 
         function next() {
 

@@ -95,13 +95,25 @@ function calendarMaker(target, date) {
                     let Le = document.getElementById("diaryFrom");
 
                     if(data != ""){
-                        let plz="";
-                        let alll="";
+                        let h_diary="";
 
-                        alll = `'${data[i].article_title}','${data[i].article_id}','${data[i].link}','${data[i].author_name}','${data[i].citated_count}','${data[i].reg_date}','${data[i].category}','${data[i].keyword}','${data[i].abstract}'`;
-                        plz += `<section><ul id="lef_resultT"><li style="margin-left: 0.1%;">${data[i].category}</li><li>${data[i].citated_count}회</li><li>${data[i].reg_date}</li></ul></section><br><section id="name"><div onclick="test1_c(${alll})">${data[i].article_title}</div></section>`;
+                        h_diary = `<div id="diaryFrom">
+                        <table>
+                            <th colspan="2">${data}</th>
+                            <tr><td class="title">날씨</td><td class="info">${data}</td></tr>
+                            <tr><td class="title">최저 기온</td><td class="info">${data}</td></tr>
+                            <tr><td class="title">최고 기온</td><td class="info">${data}</td></tr>
+                            <tr><td class="title">습도</td><td class="info">${data}</td></tr>
+                            <tr><td class="title">병충해</td><td class="info">${data}</td></tr>
+                            <tr><td class="title">방제 정보</td><td class="info">${data}</td></tr>
+                            <tr><td class="title">농약</td><td class="info">${data}</td></tr>
+                            <tr><td class="title">비료</td><td class="info">${data}</td></tr>
+                            <tr><td class="title">작업내용</td><td class="info">${data}</td></tr>
+                            <tr><td colspan="2"><img src="${data}" alt="저장 이미지" style="max-height: 400px; max-width: 350px;"></td></tr>
+                        </table>
+                        </div>`;
 
-                        Le.innerHTML=(plz+"");
+                        Le.innerHTML=(h_diary+"");
                     }
                 },
                 error : function() {

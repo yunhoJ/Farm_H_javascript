@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .disease_name {
+            display: inline-block;
+            background-color: whitesmoke;
+            width: 105pt;
+            height: 30pt;
+        }
+
+        .disease_acc {
+            display: inline-block;
+            background-color: whitesmoke;
+            width: 60pt;
+            height: 30pt;
+        }
+
+        #fertilizer_info {
+            border: 1px solid;
+            background-color: #27ae5f;
+            color: white;
+            border-radius: 4px;
+            transition-duration: 0.3s;
+        }
+
+        .info_btn {
+            height: 100pt;
+            width: 30pt;
+        }
+
+        #info1 {
+            margin-top: 2%;
+        }
+
+        #info2 {
+            display: inline-block;
+            background-color: whitesmoke;
+            width: 220pt;
+            height: 150pt;
+            border: 1px wheat;
+            margin-top: 2%;
+            text-align: left;
+        }
+
+        .result_btn {
+            margin-top: 5%;
+        }
+
+        #drone {
+            border: 1px solid;
+            background-color: #27ae5f;
+            color: white;
+            border-radius: 4px;
+            transition-duration: 0.3s;
+            box-sizing: border-box;
+            width: 37%;
+            height: 40pt;
+            margin-right: 3%;
+        }
+
+        #save {
+            border: 1px solid;
+            background-color: #27ae5f;
+            color: white;
+            border-radius: 4px;
+            transition-duration: 0.3s;
+            box-sizing: border-box;
+            width: 37%;
+            height: 40pt;
+            margin-left: 3%;
+        }
+
+        #drone:active {
+            background-color: cadetblue;
+        }
+
+        #save:active {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result_bg">
+        <h2 title="진단 결과">진단 결과</h2>
+    </div>
+    <div class="result_inner">
+        <div id="analysis_result">
+            <img src="/imgs/disease.png" alt="" style="width: 80%; height: 90%">
+        </div>
+        <div id="info1">
+            <span class="disease_name"></span>
+            <span class="disease_acc"></span>
+            <span class="info_btn">
+                <input type="button" value="농약 정보" id="fertilizer_info"
+                    onclick="location.href='http://220.80.203.20:5500/fertilizer.html'">
+            </span>
+        </div>
+        <div id="info2">
+            <h3 style="margin-top: 3%; margin-left: 4%;">예방법</h3>
+            <span class=""></span>
+        </div>
+
+    </div>
+    <div class="result_btn">
+        <input type="button" value="드론 방제 신청" id="drone" onclick="location.href='http://220.80.203.20:5500/result_drone.html'">
+        <input type="submit" value="이력 저장" id="save" onclick="next()">
+    </div>
+
+
+    <script>
+        function next() {
+
+            let isChecked = confirm("현재 결과를 저장하시겠습니까?");
+            if (isChecked) {
+                console.log("true")
+            } else {
+                console.log("false")
+            }
+
+        }
+    </script>
+</body>
+
+</html>

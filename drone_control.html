@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            width: 90%;
+            margin-left: 5%
+        }
+        select::-ms-expand {
+            display: none;
+        }
+        .drone_select {
+            -o-appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 81%;
+            height: 60px;
+            background: url('/imgs/arrow-down-sign-to-navigate.png') calc(100% - 10px) center no-repeat;
+            background-size: 20px;
+            padding: 5px 30px 5px 10px;
+            border: 2px solid #27ae5f;
+            border-radius: 4px;
+            outline: 0 none;
+            margin-bottom: 5%;
+        }
+        .date_select{
+            -o-appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 67%;
+            height: 45px;
+            padding: 5px 30px 5px 10px;
+            border: 2px solid #27ae5f;
+            border-radius: 4px;
+            outline: 0 none;
+            margin-bottom: 10%;
+            background-color: white;
+        }
+        .drone_select option{
+            background: black;
+            color: #fff;
+            padding: 3px 0;
+        }
+        #drone_date{
+            width: 156px;
+            height: 43px;
+            padding: 5px 30px 5px 10px;
+            border: 2px solid #27ae5f;
+            border-radius: 4px;
+            outline: 0 none;
+            margin-bottom: 10%;
+        }
+        .info_txt{
+            width: 67%;
+            height: 43px;
+            padding: 5px 30px 5px 10px;
+            border: 2px solid #27ae5f;
+            border-radius: 4px;
+            outline: 0 none;
+            margin-top: 5%;
+            margin-bottom: 3%;
+        }
+        #drone_apply{
+            border: 1px solid;
+            background-color: #27ae5f;
+            border-radius: 4px;
+            transition-duration: 0.3s;
+            width: 58%;
+            height: 45pt;
+            margin-top: 10%;
+            box-sizing: border-box;
+            color: white;
+        }
+        #drone_apply:active{
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2 style="margin-bottom: 20px;">드론 방제</h2>
+        <!-- <div>
+            <label for="input_file">
+                <span  style="background-color: #c3ffb4">↓이미지 선택↓</span><br>
+                <img src="/imgs/camera.png" style="cursor: pointer; width: 100px; height: 100px;">
+                <input type="file" id="input_file" style="display: none;" accept="image/*;capture=camera" />
+            </label>
+        </div> -->
+        <div>
+            <form action="">
+                <select name="fertilizer" class="drone_select">
+                    <option disabled selected>작물선택</option>
+                    <option value="tomato">토마토</option>
+                    <option value="apple">사과</option>
+                </select>
+                <input type="text" placeholder="농약 입력" class="info_txt">
+                <label for="date_select">
+                    <br><span  style="background-color: #c3ffb4">↓날짜 선택↓</span>
+                    <input type="date" name="날짜선택" class="date_select">
+                </label>
+                <select name="type" class="drone_select">
+                    <option disabled selected>농지유형</option>
+                    <option value="non">논</option>
+                    <option value="bat">밭</option>
+                    <option value="house">하우스</option>
+                </select>
+                <input type="text" placeholder="평수(3.3m²) 입력" class="info_txt">
+                <input type="submit" value="신청하기" id="drone_apply">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

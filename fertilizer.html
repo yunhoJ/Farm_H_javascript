@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .fertilizer_bg {
+            height: 100%;
+            width: 100%;
+        }
+
+        .fertilizer_btn {
+            position: absolute;
+            top: 80%;
+            left: 12%;
+            width: 80%;
+            height: 40pt;
+        }
+        .btn{
+            border: 1px solid;
+            background-color: #27ae5f;
+            color: white;
+            border-radius: 4px;
+            transition-duration: 0.3s;
+            box-sizing: border-box;
+            width: 46%;
+            height: 120%;
+        }        
+        .btn:active {
+            background-color: cadetblue;
+        }
+        table{
+            border: 2px solid;
+            background-color: #fdcb6e;
+        }
+        td{
+            border: 2px solid;
+            background-color: #ffeaa7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fertilizer_bg">
+        <h2 style="text-align: center;">농약 정보</h2>
+        <div class="item_container">
+            <div>
+                <table>
+                    <th class="disease_name" style="width: 50px; height: 40px;" colspan="2">
+                        잎곰팡이병
+                    </th>
+                    <tr>
+                        <td style="width: 100px; height: 90px;" rowspan="2">
+                            <img src="/imgs/fertilizer.png" width="120px" height="100px">
+                        </td>
+                        <td style="width: 250px; height: 50px;">
+                            카벤다짐.가스가마이신 수화제
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50px; height: 50px;">발병초부터 7일간격 경엽처리</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="fertilizer_btn">
+                    <input type="button" value="농약구매" class="btn">
+                    <input type="button" value="뒤로가기" class="btn" onclick="self.close()">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

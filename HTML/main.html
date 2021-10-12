@@ -51,7 +51,7 @@
             cursor: pointer;
         }
 
-        
+
 
         #fertilizer {
             width: 100px;
@@ -66,11 +66,15 @@
             width: 100px;
             height: 100px;
         }
-        span{
+
+        span {
             color: white;
         }
-        .main_img{
-            height: 100px; width: 100px; color: white; 
+
+        .main_img {
+            height: 100px;
+            width: 100px;
+            color: white;
         }
     </style>
 </head>
@@ -80,11 +84,15 @@
         <h2 title="farm_h"><img src="/HTML/image/mainimg.png" style="width: 250px; height: 80px;"></h2>
         <div class="main_inner">
             <label for="cam">
-            <div class="main_btn">
-                <img src="/imgs/smart-farm.png" id="main_disease" class="main_img"><br>
-                <span>병충해 판독</span>
-            <input type="file" id="cam" style="display: none;" accept="image/*;capture=camera"/>
-            </div>
+                <div class="main_btn">
+                    <img src="/imgs/smart-farm.png" id="main_disease" class="main_img"><br>
+                    <span>병충해 판독</span>
+                    <form action="http://127.0.0.1:8085/" name="imge_data" method="GET"
+                        enctype="multipart/form-data">
+                        <input type="file" id="cam" style="display: none;" accept="image/*;capture=camera" />
+                        <input type="submit" id="sm">
+                    </form>
+                </div>
             </label>
             <a href="http://220.80.203.20:5500/history.html" class="main_btn">
                 <img src="/imgs/smart-farm2.png" id="main_history" class="main_img"><br>
@@ -101,10 +109,12 @@
     <input type="file" accept="image/*;capture=camera"/> -->
 
     <script>
-        document.getElementById("cam").addEventListener("change", function(){
-            
-            location.href="http://220.80.203.20:5500/analysis.html"
-        });
+        // document.getElementById("cam").addEventListener("change", function () {
+        //     document.getElementById("sm");
+        //     location.href = "http://220.80.203.20:5500/analysis.html";
+        // });
+
+
     </script>
 </body>
 

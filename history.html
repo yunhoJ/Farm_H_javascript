@@ -22,10 +22,16 @@
                     <input type="file" style="display: none;" id="fertilizer_cam" accept="image/*;capture=camera" />
                 </div>
             </label>
-            <a href="#" class="history_btn">
-                <img src="/imgs/mic.png" id="mic"><br>
-                <span>음성작성</span>
-            </a>
+            <label for="writing">
+                <div class="history_btn">
+                    <img src="/imgs/mic.png" id="mic"><br>
+                    <select id="writing" title="작성 방법을 선택하세요" onchange="location.href=this.value" style="display: none;">
+                        <option value="#">음성</option>
+                        <option value="http://220.80.203.20:5500/history_text.html">텍스트</option>
+                    </select>
+                    <span>음성작성</span>
+                </div>
+            </label>
             <a href="http://220.80.203.20:5500/diary.html" class="history_btn">
                 <img src="/imgs/check.png" id="check"><br>
                 <span>이력확인</span>

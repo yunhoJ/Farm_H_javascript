@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .input_text{
+            width: 82%;
+            height: 25px;
+            padding: 5px 30px 5px 10px;
+            border: 2px solid #27ae5f;
+            border-radius: 4px;
+            outline: 0 none;
+        }
+            textarea{
+            border: 2px solid #27ae5f;
+            border-radius: 4px;
+        }
+        .text_btn{
+            border: 1px solid;
+            color: white;
+            border-radius: 4px;
+            transition-duration: 0.3s;
+            box-sizing: border-box;
+            width: 40%;
+            height: 60px;
+            margin-top: 4%;
+        }
+        #save{
+            background-color: #27ae5f;
+            margin-right: 3%;
+        }
+        #back{
+            background-color: #636e72;
+            margin-left: 3%;
+        }
+        td{
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div><h2 style="margin-bottom: 3%;">이력 작성하기</h2></div>
+    <hr style="margin-top: 1%;">
+    <form action="">
+        <table>
+            <tr>
+                <td>작물명</td>
+                <td><input type="text" class="input_text"></td>
+            </tr>
+            <tr>
+                <td>날씨</td>
+                <td><input type="text" class="input_text"></td>
+            </tr>
+            <tr>
+                <td>최저 기온(℃)</td>
+                <td><input type="text" class="input_text"></td>
+            </tr>
+            <tr>
+                <td>최고 기온(℃)</td>
+                <td><input type="text" class="input_text"></td>
+            </tr>
+            <tr>
+                <td>습도(％)</td>
+                <td><input type="text" class="input_text"></td>
+            </tr>
+            <tr>
+                <td>방제 정보</td>
+                <td><input type="text" class="input_text"></td>
+            </tr>
+            <tr>
+                <td>농약</td>
+                <td><input type="text" class="input_text"></td>
+            </tr>
+            <tr>
+                <td>비료</td>
+                <td><input type="text" class="input_text"></td>
+            </tr>
+            <tr>
+                <td>작업 내용</td>
+                <td><textarea name="content" cols="30" rows="10" style="resize: none;" ></textarea></td>
+            </tr>
+        </table>
+        <div >
+            <input type="submit" id="save" class="text_btn" value="저장하기">
+            <input type="button" id="back" class="text_btn" value="뒤로가기" onclick="history.back()">
+        </div>
+    </form>
+</body>
+
+</html>

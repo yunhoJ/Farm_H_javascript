@@ -83,7 +83,7 @@ function calendarMaker(target, date) {
         $(".custom_calendar_table").on("click", "td", function () {
             $(".custom_calendar_table .select_day").removeClass("select_day");
             $(this).removeClass("select_day").addClass("select_day");
-            let k = document.getElementById("top_search").value;
+            let k = document.getElementsByClassName("select_day").value;
             $.ajax({
                 
                 type :"get" ,
@@ -99,17 +99,17 @@ function calendarMaker(target, date) {
 
                         h_diary = `<div id="diaryFrom">
                         <table>
-                            <th colspan="2">${data}</th>
-                            <tr><td class="title">날씨</td><td class="info">${data}</td></tr>
-                            <tr><td class="title">최저 기온</td><td class="info">${data}</td></tr>
-                            <tr><td class="title">최고 기온</td><td class="info">${data}</td></tr>
-                            <tr><td class="title">습도</td><td class="info">${data}</td></tr>
-                            <tr><td class="title">병충해</td><td class="info">${data}</td></tr>
-                            <tr><td class="title">방제 정보</td><td class="info">${data}</td></tr>
-                            <tr><td class="title">농약</td><td class="info">${data}</td></tr>
-                            <tr><td class="title">비료</td><td class="info">${data}</td></tr>
-                            <tr><td class="title">작업내용</td><td class="info">${data}</td></tr>
-                            <tr><td colspan="2"><img src="${data}" alt="저장 이미지" style="max-height: 400px; max-width: 350px;"></td></tr>
+                            <th colspan="2">${data.R_PLANT}</th>
+                            <tr><td class="title">날씨</td><td class="info">${data.R_WEATHER}</td></tr>
+                            <tr><td class="title">최저 기온</td><td class="info">${data.R_LOW_C}</td></tr>
+                            <tr><td class="title">최고 기온</td><td class="info">${data.R_HIGH_C}</td></tr>
+                            <tr><td class="title">습도</td><td class="info">${data.R_HUM}</td></tr>
+                            <tr><td class="title">병충해</td><td class="info">${data.R_BUG}</td></tr>
+                            <tr><td class="title">방제 정보</td><td class="info">${data.R_DR_NUM}</td></tr>
+                            <tr><td class="title">농약</td><td class="info">${data.R_PTC}</td></tr>
+                            <tr><td class="title">비료</td><td class="info">${data.R_FTZ}</td></tr>
+                            <tr><td class="title">작업내용</td><td class="info">${data.R_DIARY}</td></tr>
+                            <tr><td colspan="2"><img src="${data.R_PIC1}" alt="저장 이미지" style="max-height: 400px; max-width: 350px;"></td></tr>
                         </table>
                         </div>`;
 

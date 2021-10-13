@@ -77,14 +77,30 @@
             background-color: #27ae5f;
             border-radius: 4px;
             transition-duration: 0.3s;
-            width: 58%;
+            width: 42%;
             height: 45pt;
             margin-top: 10%;
             box-sizing: border-box;
             color: white;
+            margin-right: 3%;
+        }
+        #back{
+            border: 1px solid;
+            background-color: #636e72;
+            border-radius: 4px;
+            transition-duration: 0.3s;
+            width: 42%;
+            height: 45pt;
+            margin-top: 10%;
+            box-sizing: border-box;
+            color: white;
+            margin-left: 3%;
         }
         #drone_apply:active{
             background-color: teal;
+        }
+        #back:active{
+            background-color: rgb(71, 71, 71);
         }
     </style>
 </head>
@@ -119,6 +135,7 @@
                 </select>
                 <input type="text" placeholder="평수(3.3m²) 입력" class="info_txt">
                 <input type="submit" value="신청하기" id="drone_apply">
+                <input type="button" value="뒤로가기" id="back" onclick="history.back()">
             </form>
         </div>
     </div>

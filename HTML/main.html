@@ -81,7 +81,7 @@
 
 <body>
     <div class="main_bg">
-        <h2 title="farm_h"><img src="/HTML/image/mainimg.png" style="width: 250px; height: 80px;"></h2>
+        <h2 title="farm_h"><img src="/HTML/image/mainimg.png" style="width: 250px; height: 80px; cursor: pointer;" onclick="location.href='http://220.80.203.20:5500/HTML/main.html'"></h2>
         <div class="main_inner">
             <label for="cam">
                 <div class="main_btn">
@@ -90,7 +90,7 @@
                     <form action="http://127.0.0.1:8085/" name="imge_data" method="GET"
                         enctype="multipart/form-data">
                         <input type="file" id="cam" style="display: none;" accept="image/*;capture=camera" />
-                        <input type="submit" id="sm">
+                        <input type="submit" id="sm" style="display: none;">
                     </form>
                 </div>
             </label>
